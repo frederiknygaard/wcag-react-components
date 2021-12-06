@@ -1,7 +1,18 @@
 {
-  "name": "wcagcomponents",
+  "name": "@frederiknygaard/wcagcomponents",
   "version": "0.1.0",
   "private": true,
+  "author": "Frederik Nygaard",
+  "license": "ISC",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/frederiknygaard"
+  },
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
@@ -20,7 +31,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "rollup": "rollup -c"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +51,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "rollup": "^2.60.2",
+    "rollup-plugin-dts": "^4.0.1"
   }
 }
