@@ -5,6 +5,7 @@
   "license": "ISC",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "homepage": "https://frederiknygaard.github.io/wcag-react-components",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/frederiknygaard"
   },
@@ -31,6 +32,8 @@
     "build": "react-scripts build",
     "test": "craco test",
     "rollup": "rollup -c",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -74,6 +77,7 @@
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.5.0-alpha.1",
     "autoprefixer": "^9.8.8",
+    "gh-pages": "^3.2.3",
     "postcss": "^7.0.39",
     "rollup": "^2.60.2",
     "rollup-plugin-dts": "^4.0.1",
