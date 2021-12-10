@@ -1,13 +1,15 @@
 {
-  "name": "@frederiknygaard/wcag-react-components",
+  "name": "wcag-react-components",
   "version": "0.1.4",
   "author": "Frederik Nygaard",
   "license": "ISC",
+  "private": false,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "homepage": "https://frederiknygaard.github.io/wcag-react-components",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/frederiknygaard"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frederiknygaard/wcag-react-components"
   },
   "files": [
     "dist"

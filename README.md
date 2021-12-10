@@ -7,7 +7,7 @@
 
 To install the package run the following command:
 
-```javascript
+```
 npm install wcag-react-components
 ```
 
