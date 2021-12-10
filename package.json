@@ -1,6 +1,6 @@
 {
-  "name": "@frederiknygaard/wcagcomponents",
-  "version": "0.1.1",
+  "name": "wcag-react-components",
+  "version": "0.1.2",
   "author": "Frederik Nygaard",
   "license": "ISC",
   "main": "dist/cjs/index.js",
