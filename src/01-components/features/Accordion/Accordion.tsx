@@ -1,26 +1,20 @@
 import { AccordionItem } from './AccordionItem'
 
 export interface AccordionProps {
-    classNames?: {
-        accordion?: string
-        accordionWrapper?: string
-    }
+  classNames?: {
+    accordion?: string
+    accordionWrapper?: string
+  }
 }
 
-const Accordion: React.FC<AccordionProps> & { Item: typeof AccordionItem } = ({
-    children,
-    classNames,
-}) => {
-    const {
-        accordion: accordionClass,
-        accordionWrapper: accordionWrapperClass,
-    } = classNames ?? {}
+const Accordion: React.FC<AccordionProps> & { Item: typeof AccordionItem } = ({ children, classNames }) => {
+  const { accordion: accordionClass, accordionWrapper: accordionWrapperClass } = classNames ?? {}
 
-    return (
-        <div className={accordionClass}>
-            <div className={accordionWrapperClass}>{children}</div>
-        </div>
-    )
+  return (
+    <div className={accordionClass}>
+      <ul className={accordionWrapperClass}>{children}</ul>
+    </div>
+  )
 }
 
 Accordion.Item = AccordionItem

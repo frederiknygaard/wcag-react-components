@@ -1,4 +1,6 @@
-import { Meta } from "@storybook/addon-docs";
+import { Canvas, Meta, Story } from '@storybook/addon-docs'
+
+import { Default as AccordionDefault } from './Accordion.stories'
 
 <Meta title="documentation/Accordion" />
 
@@ -6,8 +8,10 @@ import { Meta } from "@storybook/addon-docs";
 
 The accordion is based upon https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html
 
+<Canvas>
+  <AccordionDefault {...AccordionDefault.args} />
+</Canvas>
+
 ## Features
 
 ### Click handlers
-
-TODO

@@ -4,7 +4,8 @@ import { generateId } from '../../../../09-helpers/id'
 
 export interface AccordionItemProps {
   label: string
-  classNames: {
+  classNames?: {
+    accordionItem?: string
     accordionTrigger?: string
     accordionTriggerOpen?: string
     accordionContent?: string
@@ -14,11 +15,11 @@ export interface AccordionItemProps {
 
 export const AccordionItem: React.FC<AccordionItemProps> = ({ children, label, classNames }) => {
   const {
-    accordionTrigger:
-      accordionTriggerClass = 'border-2 border-light-blue-500 text-black py-2 px-4 w-full text-left hover:bg-gray-10',
+    accordionItem: accordionItemClass = 'border border-b-0 last:border-b border-light-blue-500',
+    accordionTrigger: accordionTriggerClass = 'py-4 px-8 w-full text-left hover:bg-gray-10',
     accordionTriggerOpen: accordionTriggerOpenClass = '',
-    accordionContent: accordionContentClass = 'py-2 px-4 border-t-2 border-light-blue-500 hidden',
-    accordionContentOpen: accordionContentOpenClass = 'block',
+    accordionContent: accordionContentClass = 'border-t border-light-blue-500 py-4 px-8',
+    accordionContentOpen: accordionContentOpenClass = '',
   } = classNames ?? {}
 
   const [isOpen, setIsOpen] = useState(false)
@@ -29,7 +30,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({ children, label, c
   const contentId = `content-${id}`
 
   return (
-    <>
+    <li className={accordionItemClass}>
       <button
         className={cx(accordionTriggerClass, { [accordionTriggerOpenClass]: isOpen })}
         onClick={clickHandler}
@@ -43,10 +44,10 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({ children, label, c
         aria-labelledby={triggerId}
         id={contentId}
         role="region"
-        className={cx(accordionContentClass, { [accordionContentOpenClass]: isOpen })}
+        className={cx(accordionContentClass, { hidden: !isOpen }, { [accordionContentOpenClass]: isOpen })}
       >
         {children}
       </div>
-    </>
+    </li>
   )
 }
