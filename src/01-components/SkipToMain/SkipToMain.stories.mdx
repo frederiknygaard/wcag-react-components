@@ -1,0 +1,47 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs'
+
+import { Default as SkipToMainDefault } from './SkipToMain.stories'
+
+<Meta title="documentation/SkipToMain" />
+
+# Skip to main
+
+The skip to main - also known as skip navigation links - is a way for the user to skip repeated content on a page, which usually is the navigation.
+It is made to meet the [Succes Criteria 2.4.1 Bypass Blocks](https://www.w3.org/TR/WCAG21/#bypass-blocks)
+
+<Canvas>
+  <SkipToMainDefault {...SkipToMainDefault.args} />
+</Canvas>
+
+## Features
+
+## Props
+
+<table>
+  <tbody>
+    <tr>
+      <th>text*</th>
+      <td>
+        The text that is show when the element is in focus and is readable by screenreaders. Remember to hide the
+        element when not in focus if overwriting the classnames
+      </td>
+    </tr>
+    <tr>
+      <th>id</th>
+      <td>
+        Id of the element or container that the skip to main should link to. This would usually be the main content of
+        the page
+      </td>
+    </tr>
+    <tr>
+      <th>classNames</th>
+      <td>
+        <ul>
+          <li>
+            <b>link:</b>{' '}
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>

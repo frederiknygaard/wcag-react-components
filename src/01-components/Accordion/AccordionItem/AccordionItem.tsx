@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import cx from 'classnames'
-import { generateId } from '../../../../09-helpers/id'
+import { generateId } from '../../../09-helpers/id'
 
 export interface AccordionItemProps {
   label: string
