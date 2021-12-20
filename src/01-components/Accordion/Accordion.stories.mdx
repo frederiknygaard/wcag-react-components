@@ -1,6 +1,5 @@
-import { Canvas, Meta, Story } from '@storybook/addon-docs'
-
-import { Default as AccordionDefault } from './Accordion.stories'
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs'
+import { Accordion } from './Accordion'
 
 <Meta title="documentation/Accordion" />
 
@@ -8,10 +7,63 @@ import { Default as AccordionDefault } from './Accordion.stories'
 
 The accordion is based upon https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html
 
+## Usage
+
+```javascript
+import { Accordion } from 'wcag-react-components'
+```
+
+```javascript
+<Accordion>
+  <Accordion.Item label="Accordion Trigger #1">Accordion Content #1</Accordion.Item>
+  <Accordion.Item label="Accordion Trigger #2">Accordion Content #2</Accordion.Item>
+  <Accordion.Item label="Accordion Trigger #3">Accordion Content #3</Accordion.Item>
+</Accordion>
+```
+
+## Example
+
 <Canvas>
-  <AccordionDefault {...AccordionDefault.args} />
+  <Accordion>
+    <Accordion.Item label="Accordion Trigger #1">Accordion Content #1</Accordion.Item>
+    <Accordion.Item label="Accordion Trigger #2">Accordion Content #2</Accordion.Item>
+    <Accordion.Item label="Accordion Trigger #3">Accordion Content #3</Accordion.Item>
+  </Accordion>
 </Canvas>
+
+## Props
+
+### Accordion
+
+Props for the accordion
+
+<ArgsTable of={Accordion} />
+
+### Accordion.Item
+
+Props for the accordion item
+
+<ArgsTable of={Accordion.Item} />
 
 ## Features
 
-### Click handlers
+<table>
+  <tbody>
+    <tr>
+      <th>Tab</th>
+      <td>Elements are focusable by using tab</td>
+    </tr>
+    <tr>
+      <th>Keydown & Keyup button</th>
+      <td>Navigate through the accordion items by using the keydown or keyup button</td>
+    </tr>
+    <tr>
+      <th>Home and End button</th>
+      <td>Use the home or end button to get to first or last accordion item</td>
+    </tr>
+    <tr>
+      <th>Enter</th>
+      <td>Use enter to toggle a single accordion item</td>
+    </tr>
+  </tbody>
+</table>

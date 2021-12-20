@@ -1,13 +1,23 @@
 {
   "name": "wcag-react-components",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "author": "Frederik Nygaard",
   "license": "ISC",
   "private": false,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "homepage": "https://frederiknygaard.github.io/wcag-react-components",
-  "keywords": ["wcag", "react", "accessibility", "components", "wai", "wai-aria", "ada", "508", "compliance"],
+  "keywords": [
+    "wcag",
+    "react",
+    "accessibility",
+    "components",
+    "wai",
+    "wai-aria",
+    "ada",
+    "508",
+    "compliance"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/frederiknygaard/wcag-react-components"
@@ -84,6 +94,7 @@
     "postcss": "^7.0.39",
     "rollup": "^2.60.2",
     "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-terser": "^7.0.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
 }

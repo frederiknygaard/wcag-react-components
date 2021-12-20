@@ -1,8 +1,15 @@
 # WCAG Components
 
+**Disclamer: This component library is in a very preliminary state**
+
+The purpose of this library is to make it easier to have react application to meet the criteria of the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/). The library contains the components, that aren't natively WCAG compliant.
+
+The components in the library is made to meet the criteria of version 2.1 AA in the [guidelines](https://www.w3.org/TR/WCAG21/).
+
+## Table of content
   - [Getting started](#getting-started)
-  - [Usage](#usage)
-    - [Accordion](#accordion)
+  - [Components](#components)
+  - [Documentation](#documentation)
 ## Getting started
 
 To install the package run the following command:
@@ -11,18 +18,13 @@ To install the package run the following command:
 npm install wcag-react-components
 ```
 
-## Usage
-To use a react component, import the component as a named import:
+## Components
 
-### Accordion
+This library contains the following components: (Click to see the documentation)
 
-```javascript
-import { Accordion } from 'wcag-react-components';
+- [Accordion](https://frederiknygaard.github.io/wcag-react-components/?path=/story/documentation-accordion--page)
+- [Skip to main](https://frederiknygaard.github.io/wcag-react-components/?path=/story/documentation-skiptomain--page)
 
-const MyApp = (props) => (
-    <Accordion>
-      <Accordion.Item label="Accordion trigger">This is my accordion content</Accordion.Item>
-    </Accordion>
-)
-```
 
+## Documentation
+To see the full documentation for the components, please visit the [storybook documentation here](https://frederiknygaard.github.io/wcag-react-components/?path=/story/documentation-getting-started--page)
