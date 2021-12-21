@@ -1,0 +1,10 @@
+.arrow-after:after {
+    content: ">";
+    display: block;
+}
+
+.arrow-after:last-child:after {
+    content: none;
+}
+
+/*# sourceMappingURL=main.62ff2ef4.chunk.css.map*/
