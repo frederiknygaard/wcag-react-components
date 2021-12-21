@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useRef } from 'react'
 import { AccordionItem } from './AccordionItem'
-import { FocusTrap } from '../FocusTrap'
+import { Focus } from '../Focus'
 
 export interface AccordionProps {
   classNames?: {
@@ -26,13 +26,13 @@ const Accordion: React.FC<AccordionProps> & { Item: typeof AccordionItem } = ({ 
   }, [ulRef])
 
   return (
-    <FocusTrap focusableElements={focusableElements}>
+    <Focus focusableElements={focusableElements}>
       <div className={accordionClass}>
         <ul className={accordionWrapperClass} ref={ulRef}>
           {children}
         </ul>
       </div>
-    </FocusTrap>
+    </Focus>
   )
 }
 

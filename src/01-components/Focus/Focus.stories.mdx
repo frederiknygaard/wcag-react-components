@@ -1,0 +1,43 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs'
+import { Focus } from './Focus'
+
+<Meta title="documentation/Focus" />
+
+# Focus
+
+The focus component is a wrapper for react components, that enables features like using the arrow buttons, home-button and end-button
+
+## Usage
+
+```javascript
+import { Focus } from 'wcag-react-components'
+```
+
+```javascript
+  <Focus focusableElements={[document.getElementById("myButton"), ...]} >
+    <div>
+      <button id="myButton">My Button</button>
+    </div>
+  </Focus>
+```
+
+## Props
+
+Props for the breadcrumb
+
+<ArgsTable of={Focus} />
+
+## Features
+
+<table>
+  <tbody>
+    <tr>
+      <th>Keydown & Keyup button</th>
+      <td>Navigate through the focusableItems items by using the keydown or keyup button</td>
+    </tr>
+    <tr>
+      <th>Home and End button </th>
+      <td>Use the home or end button to get to first or last focusable item</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,11 +1,12 @@
 import { useEffect } from 'react'
 
-export interface FocusTrapProps {
+export interface FocusProps {
+  /** An array of the focusable elements */
   focusableElements: HTMLElement[]
 }
 
 // TODO: Add feature of finding focusable element in component, instead of passing as prop
-export const FocusTrap: React.FC<FocusTrapProps> = ({ children, focusableElements }) => {
+export const Focus: React.FC<FocusProps> = ({ children, focusableElements }) => {
   useEffect(() => {
     const clickHandler = (event: KeyboardEvent) => {
       // TODO: Is document.activeElement always an HTMLElement?

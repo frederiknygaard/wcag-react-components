@@ -23,8 +23,9 @@ npm install wcag-react-components
 This library contains the following components: (Click to see the documentation)
 
 - [Accordion](https://frederiknygaard.github.io/wcag-react-components/?path=/story/documentation-accordion--page)
+- [Breadcrumb](https://frederiknygaard.github.io/wcag-react-components/?path=/story/documentation-breadcrumb--page)
+- [Focus](https://frederiknygaard.github.io/wcag-react-components/?path=/story/documentation-focus--page)
 - [Skip to main](https://frederiknygaard.github.io/wcag-react-components/?path=/story/documentation-skiptomain--page)
-
 
 ## Documentation
 To see the full documentation for the components, please visit the [storybook documentation here](https://frederiknygaard.github.io/wcag-react-components/?path=/story/documentation-getting-started--page)

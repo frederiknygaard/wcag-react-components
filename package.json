@@ -1,6 +1,6 @@
 {
   "name": "wcag-react-components",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "author": "Frederik Nygaard",
   "license": "ISC",
   "private": false,
@@ -44,11 +44,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "craco test",
-    "rollup": "rollup -c",
-    "predeploy": "npm run build-storybook",
+    "rollup": "rollup -c",    
     "deploy-storybook": "gh-pages -d storybook-static",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "deploy": "npm run build-storybook && npm run deploy-storybook"
   },
   "eslintConfig": {
     "extends": [
